@@ -1,0 +1,68 @@
+/* Half Past Nine: behaviour the template's runtime used to drive (hover variants, phone menu, split text, logo box) */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* logo lockup is narrower than the template's (1.095 vs 1.574): same height, width follows */
+.framer-wb7s5 .framer-4pjw5e { width: 51.5px !important; }
+.framer-wb7s5.framer-v-1jd0wom .framer-4pjw5e, .framer-wb7s5.framer-v-wm9fpd .framer-4pjw5e,
+.framer-wb7s5.framer-v-h6ugw7 .framer-4pjw5e, .framer-wb7s5.framer-v-8xb5ga .framer-4pjw5e { width: 44.8px !important; }
+.framer-wE5EX .framer-znlle2 { width: 62.6px !important; }
+
+/* character text: hidden until split (no flash of unsplit copy), then each glyph animates in */
+.hp9-js .framer-spv8uh:not(.hp9-split), .hp9-js .framer-sewmft:not(.hp9-split), .hp9-js .framer-10u1d2l:not(.hp9-split) { visibility: hidden; }
+.hp9-ch { display: inline-block; opacity: .001; transform: scale(.8); }
+
+/* buttons: pine -> forest; white -> forest with white label (spring .4 / .2) */
+.framer-1f69ddc, .framer-1vedj2j { transition: background-color .4s cubic-bezier(.33,1.2,.5,1); }
+.framer-1f69ddc .framer-h17dpq p { transition: color .4s cubic-bezier(.33,1.2,.5,1); }
+@media (hover: hover) {
+  .framer-1f69ddc:hover, .framer-1vedj2j:not(:disabled):hover { background-color: #1b3a2e !important; }
+  .framer-1f69ddc.framer-v-1igi4i3:hover .framer-h17dpq { --extracted-r6o4lv: #fff !important; }
+  /* slider arrows */
+  .framer-8p9mkr:hover { background-color: rgba(255, 255, 255, .7) !important; }
+  /* social icons: body -> pine, primary -> forest, white -> white 70% */
+  .framer-14tl21l.framer-v-14tl21l:hover .framer-5iy1gz { --1m973uw: #2f5d46 !important; }
+  .framer-14tl21l.framer-v-1jy6euq:hover .framer-5iy1gz { --1m973uw: #1b3a2e !important; }
+  .framer-14tl21l.framer-v-j4cpym:hover .framer-5iy1gz { --1m973uw: rgba(255, 255, 255, .7) !important; }
+  /* hover tickets: services item, philosophy card, menu row (spring .6 / 0) */
+  .framer-19w3nny:hover .framer-18cnij9 { opacity: 1 !important; }
+  .framer-436lvp.framer-v-436lvp:hover .framer-1htx3x8, .framer-436lvp.framer-v-436lvp:hover .framer-1jitlga,
+  .framer-436lvp.framer-v-436lvp:hover .framer-1nk6x9l { opacity: 1 !important; }
+  .framer-436lvp.framer-v-s5lsc8:hover .framer-1xqioia, .framer-436lvp.framer-v-s5lsc8:hover .framer-iscl5y,
+  .framer-436lvp.framer-v-s5lsc8:hover .framer-nnj3zg { opacity: 1 !important; }
+  .framer-xre7fk.framer-v-xre7fk:hover .framer-vynk0s { opacity: 1 !important; }
+  .framer-xre7fk.framer-v-6mh3v:hover .framer-390bc2 { opacity: 1 !important; }
+  .framer-xre7fk:hover .framer-1rzphkj { transform: scale(1.05) !important; }
+}
+.framer-8p9mkr, .framer-5iy1gz { transition: background-color .4s cubic-bezier(.33,1.2,.5,1); }
+.framer-18cnij9, .framer-1htx3x8, .framer-1jitlga, .framer-1nk6x9l, .framer-1xqioia, .framer-iscl5y, .framer-nnj3zg,
+.framer-vynk0s, .framer-390bc2 { transition: opacity .6s cubic-bezier(.25,1,.5,1); }
+.framer-1rzphkj { transition: transform .6s cubic-bezier(.25,1,.5,1); }
+
+/* phone menu (template "Mobile Open"): header grows in flow, white + soft shadow (pine on blue-hero pages), bars cross */
+.framer-dn2plq-container { z-index: 5; }
+header.framer-16r6o94 { transition: background-color .2s cubic-bezier(.25,1,.5,1), box-shadow .2s cubic-bezier(.25,1,.5,1); }
+header.framer-v-wm9fpd { background-color: #fff !important; box-shadow: 0 16px 32px rgba(0, 0, 0, .1) !important; }
+header.framer-v-8xb5ga { background-color: #2f5d46 !important; box-shadow: 0 16px 32px rgba(0, 0, 0, .1) !important; }
+.framer-c6h3tp, .framer-jpla2l { transition: transform .2s cubic-bezier(.25,1,.5,1), top .2s, bottom .2s; }
+header.hp9-open .framer-c6h3tp { transform: rotate(45deg) !important; }
+header.hp9-open .framer-jpla2l { transform: rotate(-45deg) !important; }
+header:not(.hp9-open) .hp9-mlinks { display: none !important; }
+header.hp9-open .hp9-mlinks { align-items: center; justify-content: center; gap: 32px !important; }
+header.hp9-open .hp9-mlinks p { --framer-font-size: 28px !important; --framer-text-alignment: center !important; }
+header.framer-v-8xb5ga .hp9-mlinks { --extracted-1w3ko1f: #fff; }
+header.framer-v-8xb5ga .hp9-mlinks a, header.framer-v-8xb5ga .hp9-mlinks p { color: #fff !important; --framer-text-color: #fff !important; }
+.framer-fdd3hi:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; border-radius: 4px; }
+
+/* testimonial / accordion affordances */
+.framer-10j1gqh, .framer-1ljez8i, .framer-5zr9u3, .framer-nb932q { cursor: pointer; }
+
+/* contact form: Loading -> "Thank you" (template states) */
+.framer-1vedj2j.hp9-loading .framer-1d9njnr { opacity: 0; }
+.framer-1vedj2j.hp9-loading::after { content: ""; position: absolute; left: 50%; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px;
+  border-radius: 50%; background: conic-gradient(from 180deg, rgba(255,255,255,0) 0deg, #fff 342deg);
+  -webkit-mask: radial-gradient(circle, transparent 7px, #000 7.5px); mask: radial-gradient(circle, transparent 7px, #000 7.5px);
+  animation: hp9-spin 1s linear infinite; }
+@keyframes hp9-spin { to { transform: rotate(360deg); } }
+.framer-1vedj2j.hp9-success { background-color: #2f5d46 !important; }
